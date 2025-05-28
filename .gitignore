@@ -1,0 +1,29 @@
+# Java compiled class files
+*.class
+
+# Maven target directory
+/target/
+
+# Logs
+*.log
+
+# IntelliJ files
+*.iml
+.idea/
+
+# Eclipse files
+.project
+.classpath
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test reports (if generated locally)
+test-output/
+reports/
+
+# Environment files
+.env
+*.properties
