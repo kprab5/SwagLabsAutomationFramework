@@ -6,6 +6,7 @@
 
 # Logs
 *.log
+logs/
 
 # IntelliJ files
 *.iml
@@ -23,6 +24,8 @@ Thumbs.db
 # Test reports (if generated locally)
 test-output/
 reports/
+TestReport.html
+Success Screenshot.png
 
 # Environment files
 .env
