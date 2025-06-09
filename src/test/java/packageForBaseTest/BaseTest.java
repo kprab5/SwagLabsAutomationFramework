@@ -65,7 +65,7 @@ public class BaseTest
 	{
 		TakesScreenshot screenshot = (TakesScreenshot)driver;
 		File screenshot1= screenshot.getScreenshotAs(OutputType.FILE);
-		org.openqa.selenium.io.FileHandler.copy(screenshot1, new File("C:/Users/aksha/eclipse-workspace/AutomationSwagLabs/'"+name+"'.png"));
+		org.openqa.selenium.io.FileHandler.copy(screenshot1, new File("C:/Users/aksha/eclipse-workspace/AutomationSwagLabs/src/test/java/packageForTestReport'"+name+"'.png"));
 	}
 
 }
