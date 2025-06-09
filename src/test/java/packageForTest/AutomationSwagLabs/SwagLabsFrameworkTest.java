@@ -81,7 +81,7 @@ public class SwagLabsFrameworkTest extends BaseTest
 	}
 	
 	@Test(groups = "Smoketest")
-	public void regressionTest() throws InterruptedException
+	public void regressionTest() throws InterruptedException, IOException
 	{
 		HomePage homePage = new HomePage(driver);
 		homePage.setLoginCreds();
@@ -89,6 +89,18 @@ public class SwagLabsFrameworkTest extends BaseTest
 		
 		ProductsPage productsPage= new ProductsPage(driver);
 		Assert.assertTrue(productsPage.isCartDisplayed(), "Login Failed");
+		productsPage.clickOnProductName("Sauce Labs Bike Light");
+		productsPage.clickOnAddToCardBtn();
+		
+		CartPage cartPage = productsPage.clickOnGoToCart();
+		CustomerInformationPage custInfoPage = cartPage.clickOnCheckout();
+		
+		custInfoPage.setPersonalInfo("Christiano", "Ronaldo", "4000001");
+		OrderOverviewPage oopage = custInfoPage.clickOnContinue();
+		
+		OrderConfirmationPage confPage = oopage.clickOnFinishbtn();
+		getScreenshot("Success Screenshot2");
+		confPage.clickOnBackHome();	
 		productsPage.clickOnLogout();
 	}
 

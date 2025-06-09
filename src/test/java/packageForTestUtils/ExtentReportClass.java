@@ -7,7 +7,7 @@ public class ExtentReportClass
 {
 	public static ExtentReports getExtentReports()
 	{
-		String path = "C:/Users/aksha/eclipse-workspace/AutomationSwagLabs/TestReport.html";
+		String path = "C:/Users/aksha/eclipse-workspace/AutomationSwagLabs/src/test/java/packageForTestReport/TestReport.html";
 		ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(path);
 		extentSparkReporter.config().setDocumentTitle("SwagLabsReport");
 		extentSparkReporter.config().setReportName("TestReportSwagLabs");
